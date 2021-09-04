@@ -1,68 +1,79 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width-device-width, initial-scale=1.0" charset="UTF-8">
-        <link rel="stylesheet" href="/fontawesome-free-5.15.4-web/css/all.min.css">
-        <link rel="stylesheet" href="/fontawesome-free-5.15.4-web/js/all.min.js">
-        <style>
-            body {
-                background-color: black;
-                color: white;
-            }
-        
-            h1::after {
-                content: '|';
-                margin-left: 5px;
-                opacity: 1;
-                animation: pisca .7s infinite;
-            }
-        
-            @keyframes pisca {
-                0% {
-                    opacity: 1;
-                }
-        
-                50% {
-                    opacity: 0;
-                }
-            }
-        
-            a {
-                background-color: purple;
-                /* Green */
-                border: none;
-                color: white;
-                padding: 15px 32px;
-                text-align: center;
-                text-decoration: none;
-                display: inline-block;
-                font-size: 16px;
-            }
-        </style>
-    </head>
-    <body>
-        <div style="margin-top: 20%; text-align: center;">
-            <h1>Você ganhou um vale tatuagem para ficar mais linda do que já é</h1><br>
-            <!-- <button><i class="fas fa-heart" style="color: red;" aria-hidden="true"></i>oi</button> -->
-        </div>
-    </body>
-    
-    <script>
-        function typeWrite(elemento) {
-            const textoArray = elemento.innerHTML.split('');
-            elemento.innerHTML = "";
-            textoArray.forEach((letra, i) => {
-                setTimeout(() => { elemento.innerHTML += letra }, 75 * i)
-            });
-            console.log(textoArray);
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0" charset="UTF-8">
+    <link rel="stylesheet" href="/fontawesome-free-5.15.4-web/css/all.min.css">
+    <link rel="stylesheet" href="/fontawesome-free-5.15.4-web/js/all.min.js">
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css"
+        rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <script src></script>
+    <style>
+        body {
+            background-color: black;
+            color: white;
         }
-        // function typeWrite2(elemento) {
-        //     const textoArray = elemento.innerHTML.split('');
-        //     elemento.innerHTML = "";
-        //     textoArray.forEach((letra, i) => {
-        //         setTimeout(() => { elemento.innerHTML += letra }, 4650)
-        //     });
-        //     console.log(textoArray);
-        // }
-        c
+
+        h1::after {
+            content: '|';
+            margin-left: 5px;
+            opacity: 1;
+            animation: pisca .7s infinite;
+        }
+
+        @keyframes pisca {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+        }
+
+        a {
+            background-color: purple;
+            /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="margin-top: 20%; text-align: center;">
+        <h1>Você ganhou um vale tatuagem para ficar mais linda do que já é</h1><br>
+        <!-- <button><i class="fas fa-heart" style="color: red;" aria-hidden="true"></i>oi</button> -->
+    </div>
+</body>
+
+<script>
+    function typeWrite(elemento) {
+        const textoArray = elemento.innerHTML.split('');
+        elemento.innerHTML = "";
+        textoArray.forEach((letra, i) => {
+            setTimeout(() => { elemento.innerHTML += letra }, 75 * i)
+        });
+        console.log(textoArray);
+    }
+    // function typeWrite2(elemento) {
+    //     const textoArray = elemento.innerHTML.split('');
+    //     elemento.innerHTML = "";
+    //     textoArray.forEach((letra, i) => {
+    //         setTimeout(() => { elemento.innerHTML += letra }, 4650)
+    //     });
+    //     console.log(textoArray);
+    // }
+    const titulo = document.querySelector('h1');
+    typeWrite(titulo);
+        // typeWrite2(document.querySelector('i'));
+</script>
+
+</html>
